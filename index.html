@@ -11,7 +11,6 @@
     --navy-deep:#061a2e;
     --blue:#0d5eaf;
     --blue-bright:#1e88e5;
-    --aegean:#38bdf8;
     --sky:#7dd3fc;
     --ice:#eaf4fb;
     --white:#ffffff;
@@ -94,10 +93,6 @@
     backdrop-filter:blur(6px);
   }
   .btn-ghost:hover{background:rgba(255,255,255,.16)}
-  .btn-outline{
-    background:transparent;color:var(--navy);border:1.5px solid var(--line);
-  }
-  .btn-outline:hover{border-color:var(--blue);color:var(--blue)}
 
   /* ---------- Nav ---------- */
   header.nav{
@@ -234,7 +229,7 @@
   }
   .spot:hover::before{opacity:1}
   .spot-photo{
-    aspect-ratio:4/3;border-radius:14px;overflow:hidden;position:relative;margin-bottom:18px;
+    aspect-ratio:3/4;border-radius:14px;overflow:hidden;position:relative;margin-bottom:18px;
     background:linear-gradient(135deg,var(--ice),#dcecfa);
   }
   .spot-photo .ph-fallback{font-size:40px}
@@ -342,10 +337,9 @@
     .hero-grid{grid-template-columns:1fr;gap:44px}
     .hero{padding:130px 0 70px}
     .hero-card{max-width:440px;margin:0 auto}
-    .why-inner{grid-template-columns:1fr;gap:40px}
-    .why-inner{display:flex;flex-direction:column-reverse}
-    .stats-grid{grid-template-columns:repeat(3,1fr)}
-    .menu-grid,.steps{grid-template-columns:1fr;gap:20px}
+    .why-inner{display:flex;flex-direction:column-reverse;gap:40px}
+    .menu-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+    .steps{grid-template-columns:1fr;gap:20px}
     .foot-grid{grid-template-columns:1fr;gap:30px}
     .nav-links{
       position:fixed;top:0;right:0;bottom:0;width:min(78vw,320px);
@@ -368,6 +362,7 @@
   }
   @media (max-width:640px){
     .stats-grid{grid-template-columns:1fr}
+    .menu-grid{grid-template-columns:1fr}
   }
   @media (max-width:520px){
     .wrap{padding:0 18px}
@@ -528,7 +523,7 @@
         <span class="tag">Sweet</span>
         <div class="spot-photo">
           <div class="ph-fallback">🍯</div>
-          <img class="ph-img" src="images/sweets.jpg" alt="Greek sweets" onerror="this.style.display='none'">
+          <img class="ph-img" src="images/sweets.svg" alt="Greek sweets illustration" onerror="this.style.display='none'">
         </div>
         <h3>Greek Sweets</h3>
         <p>Honeyed, syrupy Greek treats to finish — not something you'll find on every corner in Cork.</p>
