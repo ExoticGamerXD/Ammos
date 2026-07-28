@@ -287,7 +287,8 @@
   .stat .sub{font-size:12.5px;color:var(--muted);margin-top:3px}
 
   /* ---------- Menu / services (spotlight cards) ---------- */
-  .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .menu-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:24px}
+  .menu-grid .spot{flex:1 1 calc(33.333% - 16px);max-width:calc(33.333% - 16px)}
   .spot{
     position:relative;background:var(--card);border:1px solid var(--line);
     border-radius:var(--radius);padding:20px 24px 26px;overflow:hidden;
@@ -410,7 +411,8 @@
     .hero{padding:130px 0 70px}
     .hero-card{max-width:440px;margin:0 auto}
     .why-inner{display:flex;flex-direction:column-reverse;gap:40px}
-    .menu-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+    .menu-grid{gap:20px}
+    .menu-grid .spot{flex-basis:calc(50% - 10px);max-width:calc(50% - 10px)}
     .steps{grid-template-columns:1fr;gap:20px}
     .foot-grid{grid-template-columns:1fr;gap:30px}
     .nav-links{
@@ -434,7 +436,7 @@
   }
   @media (max-width:640px){
     .stats-grid{grid-template-columns:1fr}
-    .menu-grid{grid-template-columns:1fr}
+    .menu-grid .spot{flex-basis:100%;max-width:100%}
   }
   @media (max-width:520px){
     .wrap{padding:0 18px}
@@ -601,15 +603,6 @@
         </div>
         <h3>Wraps &amp; Boxes</h3>
         <p>Pick your fillings, sauces and sides. Handy for eating on the move.</p>
-      </article>
-      <article class="spot reveal" data-delay="3">
-        <span class="tag">Sweet</span>
-        <div class="spot-photo">
-          <div class="ph-fallback">🍯</div>
-          <img class="ph-img" src="images/sweets.svg" alt="Greek sweets illustration" onerror="this.style.display='none'">
-        </div>
-        <h3>Greek Sweets</h3>
-        <p>Honeyed, syrupy Greek treats to finish — not something you'll find on every corner in Cork.</p>
       </article>
     </div>
   </div>
